@@ -1,62 +1,89 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+table {
+  border: 2px solid rgb(10, 42, 86);
+  border-collapse: collapse;
+}
+
+th {
+  border: 2px solid rgb(10, 42, 86);
+}
+
+td {
+  border: 2px solid rgb(10, 42, 86);
+}
+
 .App {
-    width: 900px;
-    border: 3px solid lightgreen;
-    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  width: 1200px;
+  color: white;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    padding: 14px 30px;
-    height: 70px;
-    border: 1px solid red;
-    color:rgb(0, 225, 255);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    background-color: rgb(10, 42, 86);
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding: 14px 30px;
+  height: 70px;
+  color: white;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #001F54 7%, #034078, #1282A2 70%, #97d7d7 );
+
 }
 
 .header--title {
-    margin: 0;
-    align-self: center;
-    font-weight: 600;
+  margin: 0;
+  align-self: center;
+  font-weight: 600;
 }
 
 .article {
-    display: flex;
-    max-height: 300px;
-    padding: 14px 30px;
-    justify-content: space-between;
+  display: flex;
+  max-height: 400px;
+  margin-top: 30px;
+  padding: 20px 40px 0px 40px;
+  justify-content: space-between;
+  font-family: cursive;
+  font-weight: 400;
 }
 
 .article--photo {
-    max-height: inherit;
-    border-radius: 10px;
-    margin-right: 40px;
+  max-height: inherit;
+  border-radius: 10px;
+  max-width: 450px;
 }
 
 .article--text {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 600px;
+  font-size: 36px;
+}
+
+.article--text > h2 {
+  margin: 0px 0px 30px 0px;
+  padding: 0;
+  font-weight: 700;
+  font-size: 36px;
 }
 
 .article--header {
-    margin: 0px 0px 20px 0px;
-    text-align: center;
-    letter-spacing: -0.5px;
+  margin: 0px 0px 20px 0px;
+  text-align: center;
 }
 
 .article--content {
-    margin: 0;
+  margin: 0;
 }
 
 .footer {
-    display: flex;
-    background-color: rgb(10, 42, 86);
-    color: white;
-    padding: 14px 30px;
-    font-size: 13px;
-    justify-content: center;
+  display: flex;
+  background-color: #0A1128;
+  color: white;
+  padding: 14px 30px;
+  font-size: 13px;
+  justify-content: center;
 }

@@ -5,6 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     display: flex;
     justify-content: center;
+    background: linear-gradient(to right top, #0A1128 , #001F54 , #034078, #1282A2, #FEFCFB );
 }
 
 code {
