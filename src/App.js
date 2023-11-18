@@ -6,7 +6,6 @@ import Numbers from "./components/Numbers";
 import Table from "./components/Table";
 import HiddenText from "./components/HiddenText";
 import Pagination from "./components/Pagination";
-import PaginationExample from "./components/PaginationExample";
 import ClickCounter from "./components/ClickCounter";
 
 import diver1 from "./images/diver-1.jpg";
@@ -32,13 +31,13 @@ const articles = [
     title: "I would still feel a dim light!",
     content:
       "If i could get that far but it's painfull in here. Just by looking in the nights darkness. I feel like a diver struggling with the decompression",
-  }
-  // {
-  //   pic: diver4,
-  //   title: "I want to make sure that I'm alive!",
-  //   content:
-  //     "So as I am for the deep ocean floor again, I'll breath for a moment.",
-  // },
+  },
+  {
+    pic: diver4,
+    title: "I want to make sure that I'm alive!",
+    content:
+      "So as I am for the deep ocean floor again, I'll breath for a moment.",
+  },
 ];
 
 const numbers = [1, 2, 3, 4, 5];
@@ -107,33 +106,6 @@ const data = [
   },
 ];
 
-// const componentsList = [
-//   <Article
-//         image={articles[0].pic}
-//         articleHeader={articles[0].title}
-//         content={articles[0].content}
-//         isReverse={true}
-//       />,
-//       <Article
-//         image={articles[1].pic}
-//         articleHeader={articles[1].title}
-//         content={articles[1].content}
-//         isReverse={false}
-//       />,
-//       <Article
-//         image={articles[2].pic}
-//         articleHeader={articles[2].title}
-//         content={articles[2].content}
-//         isReverse={true}
-//       />,
-//       <Article
-//         image={articles[3].pic}
-//         articleHeader={articles[3].title}
-//         content={articles[3].content}
-//         isReverse={false}
-//       />
-// ]
-
 const componentsList = []
   articles.forEach(element => {
     componentsList.push(
@@ -168,18 +140,17 @@ function App() {
         content={articles[2].content}
         isReverse={true}
       />
-      {/* <Article
+      <Article
         image={articles[3].pic}
         articleHeader={articles[3].title}
         content={articles[3].content}
         isReverse={false}
-      /> */}
+      />
       <Numbers numbers={numbers} />
       <div className="buttons-states">
         <HiddenText />
         <ClickCounter />
       </div>
-      {/* <PaginationExample /> */}
       <Pagination objects_list={articles}/>
       <Table objects_list={data} />
       <Footer />
