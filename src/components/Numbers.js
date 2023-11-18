@@ -1,14 +1,13 @@
 
-export default function () {
-  const numbers = [1,2,3,4,5];
+export default function (props) {
 
   return (
     <div className="numbers">
       <ul className="numbers--list">
-        {numbers.map((number) => (
+        {props.numbers.map((number) => (
           <li key={number}>{number}</li>
         ))}
       </ul>
     </div>
-  );
+  ); 
 }

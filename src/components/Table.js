@@ -1,7 +1,7 @@
 
-export default function Table ({objects_list}) {
+export default function Table (props) {
   // Отримуємо всі можливі назви полів з об'єктів масиву
-  const allFields = objects_list.reduce(
+  const allFields = props.objects_list.reduce(
     (fields, obj) => [...fields, ...Object.keys(obj)],
     []
   );
@@ -10,19 +10,19 @@ export default function Table ({objects_list}) {
   const uniqueFields = [...new Set(allFields)];
 
   return (
-    <table>
+    <table className="table">
       <thead>
-        <tr>
+        <tr className="table--tr">
           {uniqueFields.map((field) => (
-            <th key={field}>{field}</th>
+            <th className="table--th" key={field}>{field}</th>
           ))}
         </tr>
       </thead>
       <tbody>
-        {objects_list.map((item, index) => (
-          <tr key={index}>
+        {props.objects_list.map((item, index) => (
+          <tr className="table--td" key={index}>
             {uniqueFields.map((field) => (
-              <td key={field}>{item[field]}</td>
+              <td className="table--td" key={field}>{item[field]}</td>
             ))}
           </tr>
         ))}
