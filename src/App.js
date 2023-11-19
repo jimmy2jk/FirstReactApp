@@ -7,18 +7,28 @@ import Table from "./components/Table";
 import HiddenText from "./components/HiddenText";
 import Pagination from "./components/Pagination";
 import ClickCounter from "./components/ClickCounter";
-
+import logo from "./images/logo192.png";
 import diver1 from "./images/diver-1.jpg";
 import diver2 from "./images/diver-2.png";
 import diver3 from "./images/diver-3.jpg";
 import diver4 from "./images/diver-4-1.jpg";
+import sasori from "./images/sasori.jpg";
+import hidan from "./images/hidan.jpg";
+import kakuzu from "./images/kakuzu.jpg";
+import deidara from "./images/deidara.jpg";
+import itachi from "./images/itachi.jpg";
+import nagato from "./images/nagato.jpg";
+import konan from "./images/konan.jpg";
+import kisame from "./images/kisame.jpg";
+import tobi from "./images/tobi.jpg";
+import zetsu from "./images/zetsu.jpg";
 
 const articles = [
   {
     pic: diver1,
     title: "That horizon is drifring away",
     content:
-      "The sky is too blue to even portray it tomorrow A group of people is so stragnant to me that i can't even breath. ",
+      "The sky is too blue to even portray it tomorrow. A group of people is so stragnant to me that i can't even breath. ",
   },
   {
     pic: diver2,
@@ -42,7 +52,7 @@ const articles = [
 
 const numbers = [1, 2, 3, 4, 5];
 
-const data = [
+const tableData = [
   {
     name: "Sasori",
     village: "Hidden Sand",
@@ -106,22 +116,63 @@ const data = [
   },
 ];
 
-const componentsList = []
-  articles.forEach(element => {
-    componentsList.push(
-      <Article
-        image={element.pic}
-        articleHeader={element.title}
-        content={element.content}
-        isReverse={true}
-      />
-    )
-  });
+const akatsuki = [
+  {
+    pic: itachi,
+    title: "Itachi",
+    content: "A highly skilled Uchiha prodigy, Itachi possesses the Sharingan and is known for his exceptional skills in genjutsu, taijutsu, and ninjutsu.",
+  },
+  {
+    pic: hidan,
+    title: "Hidan",
+    content: "Immortal due to a ritual involving his own blood, Hidan is a sadistic and unpredictable fighter who worships the god Jashin.",
+  },
+  {
+    pic: kakuzu,
+    title: "Kakuzu",
+    content: "Driven by greed, Kakuzu is a money-oriented ninja who can sew his body parts back together and use threads to extract hearts for immortality.",
+  },
+  {
+    pic: deidara,
+    title: "Deidara",
+    content: "An explosives expert, Deidara uses clay to create explosive art through his unique Explosive Release techniques.",
+  },
+  {
+    pic: sasori,
+    title: "Sasori",
+    content: "A master puppeteer, Sasori converts human bodies into puppets and controls them using intricate puppetry techniques.",
+  },
+  {
+    pic: nagato,
+    title: "Pain / Nagato",
+    content: "The leader of Akatsuki, Pain possesses the Rinnegan and can control six bodies simultaneously, each with unique abilities.",
+  },
+  {
+    pic: konan,
+    title: "Konan",
+    content: "A skilled Paper Jutsu user, Konan has the ability to manipulate paper for various offensive and defensive purposes.",
+  },
+  {
+    pic: kisame,
+    title: "Kisame",
+    content: "Partnered with Itachi, Kisame is a powerful water-based ninja with immense physical strength and wields the sword Samehada.",
+  },
+  {
+    pic: tobi,
+    title: "Tobi",
+    content: "Initially posing as a bumbling fool, Tobi is later revealed as Obito Uchiha, a former comrade of Kakashi and Itachi with significant ties to the Uchiha clan.",
+  },
+  {
+    pic: zetsu,
+    title: "Zetsu",
+    content: "A plant-based entity with a split personality, Zetsu serves as Akatsuki's spy and possesses abilities related to plants and camouflage.",
+  },
+];
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header logo={logo} title="Made with Love, Obsession and React" />
       <Article
         image={articles[0].pic}
         articleHeader={articles[0].title}
@@ -151,8 +202,8 @@ function App() {
         <HiddenText />
         <ClickCounter />
       </div>
-      <Pagination objects_list={articles}/>
-      <Table objects_list={data} />
+      <Pagination objects_list={akatsuki} />
+      <Table objects_list={tableData} />
       <Footer />
     </div>
   );

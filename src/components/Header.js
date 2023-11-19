@@ -1,10 +1,9 @@
-import logo from "../images/logo192.png";
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header className="header">
-      <img src={logo} alt="React logo" className="header--logo" />
-      <h3 className="header--title">Made with Love, Obsession and React</h3>
+      <img src={props.logo} alt="React logo" className="header--logo" />
+      <h3 className="header--title">{props.title}</h3>
     </header>
   );
 }
